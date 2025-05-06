@@ -15,6 +15,20 @@ body {
   cursor: crosshair;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🚫 Prevent horizontal scroll */
+  max-width: 100vw;   /* 🧱 Prevent content from overflowing */
+}
+
+main, header, footer {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 /* ========== HEADER ========== */
 header {
   background: linear-gradient(45deg, #0f0f0f, #1a0000);
@@ -50,13 +64,15 @@ h1 {
 
 /* ========== MAIN CONTENT ========== */
 main {
-  padding: 3rem;
+  padding: 2rem 1rem;
   text-align: center;
   background: rgba(0, 0, 0, 0.75);
   margin: 2rem auto;
-  width: 85%;
+  width: 100%;
+  max-width: 800px;
   border: 3px dashed crimson;
   box-shadow: 0 0 12px #5a0000;
+  box-sizing: border-box;
 }
 
 main p {
@@ -102,7 +118,6 @@ footer {
 
 
 .skull-banner {
-  
   color: #fff;
   font-family: 'Chaos', Impact, sans-serif;
   font-size: 1.2rem;
@@ -110,9 +125,9 @@ footer {
   text-shadow: 1px 1px #000;
   border-bottom: 1px solid #ff1a1a;
   box-shadow: 0 0 10px crimson;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  /* remove display: flex and gap */
+  text-align: center;
+  white-space: nowrap;
 }
 
 .skull-banner img.skull-icon {
@@ -121,3 +136,4 @@ footer {
   vertical-align: middle;
   filter: drop-shadow(0 0 5px red);
 }
+
