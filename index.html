@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta charset="UTF-8" />
@@ -11,51 +10,52 @@
 </head>
 <body>
 
-  
-
+  <!-- Modern Marquee -->
   <header>
     <div id="eye-container"></div>
-    
-    <h1>EVILPEEK</h1>
+    <h1><span class="evilpeek">EVILPEEK</span></h1>
     <div class="marquee-container">
       <div class="marquee-track">
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <img src="images/skull.webp" alt="skull" class="skull-icon" />
-        <span>ENTER AT YOUR OWN RISK — EVILPEEK IS WATCHING</span>
-        <!-- repeat as needed -->
+        <div class="marquee-content">
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>ENTER AT YOUR OWN RISK — <span class="evilpeek">EVILPEEK</span> IS WATCHING YOU</span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>STAY PARANOID — <span class="evilpeek">EVILPEEK</span> KNOWS</span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>YOU CAN’T HIDE FROM <span class="evilpeek">EVILPEEK</span></span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+        </div>
+        <div class="marquee-content">
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>ENTER AT YOUR OWN RISK — <span class="evilpeek">EVILPEEK</span> IS WATCHING YOU</span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>STAY PARANOID — <span class="evilpeek">EVILPEEK</span> KNOWS</span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+          <span>YOU CAN’T HIDE FROM <span class="evilpeek">EVILPEEK</span></span>
+          <img src="images/skull.webp" alt="skull" class="skull-icon" />
+        </div>
       </div>
     </div>
   </header>
 
 
+
   <main>
-    <p>Welcome to EVILPEEK. Stay tuned.</p>
-    <!--<a href="#" class="cta-button">Enter the Void</a>-->
+    <p>Welcome to <span class="evilpeek">EVILPEEK</span>. Stay tuned.</p>
+    <!-- <a href="#" class="cta-button">Enter the Void</a> -->
   </main>
 
   <footer>
-    &copy; <span id="year"></span> EVILPEEK. All rights reserved.
+    &copy; <span id="year"></span> <span class="evilpeek">EVILPEEK</span>. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    window.addEventListener('DOMContentLoaded', function () {
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
   </script>
-</body>
-</html>
+  </body>
+  </html>
