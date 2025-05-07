@@ -39,7 +39,7 @@ main, header, footer {
 
 /* ========== HEADER ========== */
 header {
-  background: linear-gradient(45deg, #0f0f0f, #1a0000);
+  background: linear-gradient(45deg, #101218, #03000c);
   border-bottom: 4px double #1d3cb9d1;
   padding: 2rem;
   text-align: center;
@@ -78,7 +78,7 @@ main {
   margin: 2rem auto;
   width: 100%;
   max-width: 800px;
-  border: 3px dashed rgb(38, 113, 171);
+  border: 3px dashed #2671ab;
   box-shadow: 0 0 12px #02375b;
   box-sizing: border-box;
 }
@@ -120,7 +120,7 @@ footer {
   padding: 1rem;
   color: #888;
   background: #0f0f0f;
-  border-top: 1px dashed rgb(17, 142, 167);
+  border-top: 1px dashed #2671ab;
   font-family: monospace;
 }
 
@@ -152,7 +152,7 @@ footer {
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  background: #5bc4e482;
+  background: #1647568b;
   border-bottom: 2px solid #00eaff;
   box-shadow: 0 0 10px rgb(73, 216, 255);
   padding: 0.5rem 0;
