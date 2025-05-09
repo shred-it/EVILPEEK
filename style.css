@@ -437,3 +437,24 @@ footer {
   text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
   transform: scale(1.03);
 }
+
+.card-glow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.member-card:hover .card-glow {
+  opacity: 0.25; /* or 0.4 for more intensity */
+}
+
+.member-card * {
+  position: relative;
+  z-index: 2;
+}
