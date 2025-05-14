@@ -6,13 +6,20 @@
 }
 
 /* ========== GLOBAL ========== */
+
+
 body {
   margin: 0;
-  background: #000 url('https://www.transparenttextures.com/patterns/black-felt.png');
-  color: #f5f5f5;
+  padding: 0;
+  background: #0f0f0f; /* solid dark base */
   font-family: 'Rubik', 'Verdana', sans-serif;
-  background-attachment: fixed;
+  color: #f5f5f5;
   cursor: crosshair;
+}
+
+.content-wrap {
+  background: url('/images/evilpeekoptimized.gif') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .evilpeek {
@@ -54,6 +61,7 @@ h1 {
   text-shadow: 0 0 8px crimson, 0 0 15px red, 2px 2px 2px black;
   transform: rotate(-1deg);
   animation: bleed 2s infinite alternate ease-in-out;
+  margin-bottom: 0;
 }
 
 @keyframes bleed {
@@ -74,11 +82,11 @@ h1 {
 main {
   padding: 2rem 1rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.4) url('https://www.transparenttextures.com/patterns/black-felt.png');
+  /*background: rgba(0, 0, 0, 0.4) url('https://www.transparenttextures.com/patterns/black-felt.png');*/
   background-blend-mode: overlay;
   background-attachment: fixed;
   background-size: repeat;
-  margin: 2rem auto;
+  margin: 0rem auto;
   width: 100%;
   max-width: 800px;
   border-radius: 12px;
@@ -87,22 +95,31 @@ main {
 }
 
 main p {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: #ddd;
   font-family: 'Verdana', sans-serif;
+}
+
+.logo-glow {
+  width: 100%;
+  max-width: 300px; /* adjust as needed */
+  display: block;
+  margin: 0 auto;
+  animation: bleed 2s infinite alternate ease-in-out;
+  filter: drop-shadow(0 0 5px #0099cc) drop-shadow(0 0 10px #00e5ff);
 }
 
 /* ========== CTA BUTTON ========== */
 a.cta-button {
   display: inline-block;
   margin-top: 2rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(to right, #7dd4f7, #b296e5);
+  padding: 2rem 2rem;
+  background: linear-gradient(to right, #7dd4f7, #eeecf2);
   color: #000;
-  border: 2px solid #ffffff;
+  border: 2px solid #1ba5c7;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2.0rem;
   text-transform: uppercase;
   text-decoration: none;
   font-family: 'Chaos', Impact, sans-serif;
@@ -112,7 +129,7 @@ a.cta-button {
 
 a.cta-button:hover {
   background: #1592c7;
-  color: #000;
+  color: #ffffff;
   transform: scale(1.05) rotate(-1deg);
 }
 
@@ -123,7 +140,7 @@ footer {
   padding: 1rem;
   color: #888;
   background: #0f0f0f;
-  border-top: 1px dashed #2671ab;
+  border-top: 1px dashed #fcfeff;
   font-family: monospace;
 }
 
@@ -160,6 +177,14 @@ footer {
   box-shadow: 0 0 10px rgb(73, 216, 255);
   padding: 0.5rem 0;
   position: relative;
+}
+
+.marquee-gap-bigger {
+  height: 3rem;
+}
+
+.marquee-gap {
+  height: 2rem;
 }
 
 .marquee-track {
@@ -206,9 +231,8 @@ footer {
   gap: 2rem;
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: 4rem auto;
-
-  background: rgba(0, 0, 0, 0.4) url('https://www.transparenttextures.com/patterns/black-felt.png');
+  margin: 0rem auto 0 auto; /* ⬅️ removes top margin */
+  /*background: rgba(0, 0, 0, 0.4) url('https://www.transparenttextures.com/patterns/black-felt.png');*/
   background-blend-mode: overlay;
   background-size: repeat;
   background-attachment: fixed;
@@ -225,13 +249,13 @@ footer {
               0 0 12px #00ccff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  border-radius: 12px; /* Optional: smooths corners */
+  border-radius: 5px; /* Optional: smooths corners */
 }
 
 .member-card:hover {
   transform: translateY(-6px) scale(1.015) skewX(-2deg) skewY(1deg);
-  box-shadow: 0 0 15px #00ccff, 0 0 40px #00e5ff, 0 0 60px #00e5ff;
-  border-color: #00e5ff;
+  box-shadow: 0 0 10px #ffffff, 0 0 25px #00e5ff, 0 0 40px #dfe2e3;
+  border-color: #fafafa;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
