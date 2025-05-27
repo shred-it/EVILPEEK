@@ -486,3 +486,224 @@ footer {
   position: relative;
   z-index: 2;
 }
+
+/* PLAYER PAGES */
+/* ========== PLAYER PROFILE ========== */
+.player-profile {
+  max-width: 1000px;
+  margin: 0rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.00);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.07);
+}
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00e5ff;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.player-name {
+  font-family: 'Chaos', Impact, sans-serif;
+  font-size: 3rem;
+  color: #00ccff;
+  margin: 0;
+  animation: bleed 2s infinite alternate ease-in-out;
+}
+
+.player-role {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #66d9ef;
+  margin-bottom: 1rem;
+}
+
+.player-desc {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* ========== CLIP GALLERY ========== */
+.clip-gallery {
+  margin-top: 3rem;
+}
+
+.clip-gallery h2 {
+  font-family: 'Chaos', Impact, sans-serif;
+  color: #00e5ff;
+  margin-bottom: 1rem;
+}
+
+.clips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.clip {
+  width: 100%;
+  max-height: 360px;
+  border: 2px solid #00e5ff22;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+  transition: transform 0.2s ease;
+}
+
+.clip:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0,229,255,0.5);
+}
+
+.clip.pinned {
+  grid-column: span 2;
+  max-height: 480px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 25px #00ffff;
+}
+
+.clips:only-child .clip {
+  grid-column: span 2;
+  max-height: 480px;
+}
+
+/* Reuse existing grid for both video and iframe clips */
+.clips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.clip,
+.clip iframe,
+.clip video {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  border: 2px solid #00e5ff22;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+  transition: transform 0.2s ease;
+  background: #000;
+}
+
+/* For video tags not wrapped in .clip */
+video.clip {
+  border-radius: 8px;
+}
+
+/* On hover (videos and YouTube) */
+.clip:hover,
+video.clip:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0,229,255,0.5);
+}
+
+/* Enlarged pinned clip styling */
+.clip.pinned {
+  grid-column: span 2;
+  max-height: 480px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 25px #00ffff;
+}
+
+/* If only one clip, auto-expand it */
+.clips:only-child .clip,
+.clips:only-child video.clip {
+  grid-column: span 2;
+  max-height: 480px;
+}
+
+/* Responsive YouTube embed fix */
+.clip iframe {
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+
+/* 📱 Mobile Optimization: stack clips on smaller screens */
+@media screen and (max-width: 768px) {
+  .clips {
+    grid-template-columns: 1fr; /* stack all clips */
+  }
+
+  .clip.pinned,
+  .clips:only-child .clip,
+  .clips:only-child video.clip {
+    grid-column: span 1;
+    max-height: none;
+  }
+
+  .clip,
+  .clip iframe,
+  .clip video {
+    max-height: unset;
+    height: auto;
+  }
+}
+
+/* === CLIP LAYOUT: PINNED ABOVE, GRID BELOW === */
+.pinned-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+}
+
+.pinned-row .clip.pinned {
+  grid-column: 1 / -1;
+  max-height: 480px;
+  box-shadow: 0 0 25px #00ffff;
+  border: 2px solid #ffffff;
+}
+
+.regular-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive stacking on mobile */
+@media screen and (max-width: 768px) {
+  .pinned-row {
+    grid-template-columns: 1fr;
+  }
+
+  .regular-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pinned-row .clip.pinned {
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    margin: 0 auto;
+  }
+
+  .profile-info {
+    text-align: center;
+  }
+}

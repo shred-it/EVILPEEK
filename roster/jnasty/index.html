@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jnasty - EVILPEEK</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/roster" class="nav-link">Roster</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔥 Wrap main content in .content-wrap to show full-page gif background -->
+  <div class="content-wrap">
+    <main class="player-profile">
+      <section class="profile-header">
+        <img src="/images/jnasty.jpg" alt="Jnasty" class="profile-photo" />
+        <div class="profile-info">
+          <h1 class="player-name">Jnasty</h1>
+          <p class="player-role">The Prophet</p>
+          <p class="player-desc">The original. Discovered Evil Peek like fire. Swung first, asked never. Wrote timing into scripture. Holds god status.</p>
+        </div>
+      </section>
+
+      <section class="clip-gallery">
+        <!--<h2>Clips</h2>-->
+        <div class="clips">
+          <video class="clip pinned" src="/clips/jnasty-ace.mp4" controls></video>
+          <!--<video class="clip" src="/clips/jnasty-bhop.mp4" controls></video>-->
+          <!--<video class="clip" src="/clips/jnasty-wallbang.mp4" controls></video>-->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> EVILPEEK. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
