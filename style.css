@@ -230,7 +230,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 4rem 2rem;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0rem auto 0 auto; /* ⬅️ removes top margin */
   /*background: rgba(0, 0, 0, 0.4) url('https://www.transparenttextures.com/patterns/black-felt.png');*/
   background-blend-mode: overlay;
@@ -359,6 +359,22 @@ footer {
 
 .member-card:hover::after {
   opacity: 0.3; /* Adjust intensity */
+}
+
+.card-aya::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/images/meowaya.gif') center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.card-aya:hover::after {
+  opacity: 0.15; /* or higher for more intensity */
 }
 
 .member-photo {
