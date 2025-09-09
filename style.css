@@ -377,6 +377,25 @@ footer {
   opacity: 0.15; /* or higher for more intensity */
 }
 
+/* founder gifs*/
+
+/* Founder card GIF overlays (optional, same pattern as roster) */
+.card-founder1::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('/images/gif-founder1.gif') center/cover no-repeat;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease-in-out; z-index: 1;
+}
+.card-founder1:hover::after { opacity: 0.15; }
+
+.card-founder2::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('/images/gif-founder2.gif') center/cover no-repeat;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease-in-out; z-index: 1;
+}
+.card-founder2:hover::after { opacity: 0.15; }
+
 .member-photo {
   width: 100%;
   height: auto;
@@ -723,3 +742,125 @@ video.clip:hover {
     text-align: center;
   }
 }
+
+
+/* founders *\
+/* ====== ABOUT PAGE ====== */
+.about-hero { text-align: center; margin: 2rem 0 1rem; }
+.about-hero .logo-glow { max-width: 320px; }
+
+.about-lede { text-align: center; font-style: italic; opacity: 0.9; }
+
+.history { max-width: 900px; margin: 2rem auto; line-height: 1.8; }
+.history h2 { text-align: center; margin-bottom: 0.75rem; }
+
+.section-divider {
+  height: 1px; border: none;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  margin: 2rem 0;
+}
+
+/* Founders */
+.founders { max-width: 1100px; margin: 3rem auto; }
+.founders h2 { text-align: center; margin-bottom: 1.5rem; }
+
+.founders-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.founder-card {
+  background: rgba(0, 10, 30, 0.85);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 2px rgba(0, 229, 255, 0.25),
+    0 0 12px #00ccff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+.founder-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 10px #ffffff, 0 0 25px #00e5ff, 0 0 40px #dfe2e3;
+}
+
+.founder-media { display: flex; align-items: center; gap: 1rem; }
+.founder-photo {
+  width: 108px; height: 108px; border-radius: 12px; object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 6px #007f99;
+}
+.founder-name {
+  margin: 0; font-size: 1.25rem;
+  font-family: 'Chaos', Impact, sans-serif;
+  color: #00ccff; text-shadow: 0 0 6px #00e5ff;
+}
+.founder-handle { margin: 0.15rem 0 0.35rem; opacity: 0.85; font-size: 0.95rem; }
+.founder-bio { margin-top: 0.75rem; opacity: 0.95; color: #bbdfee; line-height: 1.5; }
+
+.socials { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.85rem; }
+.social-btn {
+  display: inline-block; padding: 0.5rem 0.8rem; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18); text-decoration: none; font-size: 0.95rem;
+  background: rgba(0, 204, 255, 0.08);
+  box-shadow: 0 0 6px #007a99 inset;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  color: #e8faff;
+}
+.social-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 204, 255, 0.18);
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* Contact */
+.contact { max-width: 900px; margin: 3rem auto; text-align: center; }
+.contact-card {
+  background: rgba(0, 10, 30, 0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem; border-radius: 16px;
+  box-shadow: 0 0 12px #00ccff44;
+}
+.contact .cta-row {
+  display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;
+}
+
+/* Outline variant that pairs with your .cta-button */
+.cta-outline {
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px; padding: 0.7rem 1.1rem; text-decoration: none;
+  display: inline-block; color: #e8faff;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+.cta-outline:hover { transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+
+/* Consistent icon styling inside buttons */
+.btn-profile img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* LinkedIn icon inside founder buttons */
+.btn-profile img {
+  width: 150px;   /* 👈 adjust size here */
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 6px;
+  object-fit: contain;
+}
+
+/* Override founder card name styling */
+.founder-name {
+  font-family: 'Rubik', 'Verdana', sans-serif; /* fallback to body font */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5f5f5;            /* normal light text */
+  text-shadow: none;         /* remove glow */
+  margin: 0.5rem 0;
+}
+

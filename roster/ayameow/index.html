@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>gojo666 - EVILPEEK</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/roster" class="nav-link">Roster</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔥 Wrap main content in .content-wrap to show full-page gif background -->
+  <div class="content-wrap">
+    <main class="player-profile">
+      <section class="profile-header">
+        <img src="/images/gojo666.jpg" alt="Jnasty" class="profile-photo" />
+        <div class="profile-info">
+          <h1 class="player-name">gojo666</h1>
+          <p class="player-role">The Savant</p>
+          <p class="player-desc">
+            Mechanical genius. Aim so pure Evil Peek became art. Doesn’t abuse timing—perfects it. LAN-tier god. Makes heads disappear.
+          </p>
+        </div>
+      </section>
+  
+      <section class="clip-gallery">
+        <div class="clips pinned-row">
+          <!-- Pinned clip spans both columns -->
+          <div class="clip pinned">
+            <iframe
+              src="https://www.youtube.com/embed/4T2JY-ho7gk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              style="width: 100%; height: 100%;"
+            ></iframe>
+          </div>
+        </div>
+      
+        <!-- Regular clips in a two-column layout -->
+        <div class="clips regular-row">
+          <video class="clip" src="/clips/gojo1.mp4" controls></video>
+          <video class="clip" src="/clips/gojo2.mp4" controls></video>
+          <!--<video class="clip" src="/clips/jnasty-wallbang.mp4" controls></video>-->
+        </div>
+      </section>
+    </main>
+  </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> EVILPEEK. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
