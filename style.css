@@ -864,3 +864,18 @@ video.clip:hover {
   margin: 0.5rem 0;
 }
 
+/* ===== Founder cards (About page) ===== */
+.founders-grid {
+  display: flex;              /* instead of full roster grid */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;          /* keeps them from being too wide */
+}
+
+.founders-grid .member-card {
+  width: 300px;               /* fixed size, not full width */
+  max-width: 90vw;
+}
+
